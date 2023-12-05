@@ -11,9 +11,16 @@ for i, line in enumerate(lines):
 total = 0
 for i, num_spans in enumerate(all_num_spans):
     lines_to_check = lines[(0 if i == 0 else i - 1) : i + 2]
+    print(f'Checking line with {len(num_spans)} spans, line: {lines[i]}')
+    print("Checked lines:")
+    for line in lines_to_check:
+        print(line)
+    print("Spans:", num_spans)
     for j, (begin, end) in enumerate(num_spans):
         is_adjacent = False
         for line in lines_to_check:
+            # if begin == 81 and end == 82:
+            #     import pdb; pdb.set_trace()
             if re.search(r'[^.A-Za-z0-9 ]', line[begin - 1: end + 1]):
                 is_adjacent = True
                 break

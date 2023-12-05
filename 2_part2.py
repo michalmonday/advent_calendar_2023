@@ -9,8 +9,7 @@ cubes = {
 }
 
 def parse_set(s):
-    clrs_dict = {'red': 0, 'green': 0, 'blue': 0
-    }
+    clrs_dict = {'red': 0, 'green': 0, 'blue': 0}
     digit_clrs = [dc.strip() for dc in s.strip().split(',')]
     for dc in digit_clrs:
         num, clr = dc.split()
