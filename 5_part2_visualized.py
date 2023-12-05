@@ -6,7 +6,7 @@ import numpy as np
 import random
 plt.ticklabel_format(style='plain')
 
-with open('input_5_small.txt') as f:
+with open('inputs/input_5_small.txt') as f:
 # with open('input_5.txt') as f:
     lines = [line.strip() for line in f.readlines()]
 
